@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Time</title>
+    <style>
+        .container{max-width: 1200px; margin: auto; padding: 0 10px;}
+        [disabled]{cursor: not-allowed;background: red;}
+        .btn{cursor: pointer; background: transparent; margin: 10px 0; padding: 8px 12px; border: 1px solid; color: inherit; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript Date And Time</h1>
+        <button class="btn start">Start</button>
+        <button disabled class="btn stop">Stop</button>
+        <span class="time">0</span>
+        <div>
+            <button class="btn">Send</button>
+            <p class="p"></p>
+       </div>
+    </div>
+        <script>
+            "Use Strict"
+
+  // set time out
+
+  function timer(){
+            console.log("Hello JS Set TimeOut");
+        }
+       setTimeout(timer,5000)
+
+            // Counter 
+
+let a = 0
+function Time(){
+    document.querySelector(".time").innerHTML=a
+
+    a++;
+}
+    document.querySelector(".start").addEventListener("click",function(){
+        Time();
+        let cont = setInterval(Time,1000);
+        document.querySelector(".stop").removeAttribute("disabled")
+        this.setAttribute("disabled",'')
+
+        document.querySelector(".stop").addEventListener("click",function(){
+            clearInterval(cont);
+            document.querySelector(".stop").setAttribute("disabled","");
+            document.querySelector(".start").removeAttribute("disabled");
+        })
+    });
+
+
+    
+document.querySelector(".btn").addEventListener("click",function(){
+    function time(){
+        document.querySelector("p").innerHTML="Successfully Send"
+    }
+    setTimeout(time,1000);
+});
+
+        //date
+        var t=new Date();
+     var date=t.getDate();
+     console.log(date);
+
+     //get year
+     
+     let o=new Date();
+     let lol=o.getFullYear();
+     console.log(lol);
+
+     // Month
+
+     let b=new Date()
+     let mon=b.getMonth();
+     console.log(mon);
+
+     // day
+
+     let k=new Date()
+     let Day=k.getDay();
+     console.log(Day);
+      
+
+        </script>
+</body>
+</html>

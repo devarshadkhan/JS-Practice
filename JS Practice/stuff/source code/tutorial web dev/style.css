@@ -1,0 +1,67 @@
+/* body{
+    background-color:#ff006a; 
+    /* background-image: url(cars.jpg); */
+    /* background-size: cover;
+    background-repeat: no-repeat; 
+    animation-name: mainbody;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mainbody{
+    0% {background-color: #ff006a;}
+    25% {background-color: blue;}
+    50% {background-color: chocolate;}
+    75% {background-color: crimson;}
+    100% {background-color: cyan;} *//*
+} */
+
+/*
+p{
+     color: green;
+    font-size: 56px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-style: italic; 
+}
+
+img{
+    width: 400px;
+    height: 250px;
+    border-radius: 23px;
+    border-width: initial;
+    margin-top: 25px;
+    margin-left: 50px;
+    transition: 0.5s ease;
+} 
+
+img:hover{
+    width: 450px;
+    height: 275px;
+    background-color: #000;
+}
+
+.para{
+    font-size: 56px;
+    font-family: cursive;
+    color: lightcoral;
+}
+
+.para:hover{
+    font-size: 86px;
+    color: lightslategrey;
+}
+
+p{
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: n1;
+    color: lime;
+}
+
+@keyframes n1{
+    /* from {color: lime;}
+    to {color: maroon;} */
+     /* from {margin-top: 0px;}
+     to {margin-top: 300px;}
+} */

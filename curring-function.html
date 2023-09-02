@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying Function in Javascript</title>
+</head>
+<body>
+    <h1>Curring Function</h1>
+    <script>
+        
+
+        // Curring Function
+
+        // function Add(a){
+        //     return function(b){
+        //         return function(c){
+        //             return a+b+c
+        //         };
+        //     };
+        // };
+
+        
+        // // Created New Variable to store data-Manuplated
+
+        // // This is long Way
+        // const data1  = Add (10);
+        // const data2 = data1 (10);
+        // const data3 = data2 (10);
+
+
+        // const result = Add(10)(10)(10);
+        // console.log(result);   // Return karega 30
+
+
+        //     // Curring ko object me kaise used kare
+
+        //     UserObj ={
+        //         name:"Arshad",
+        //         Surname:"Khan",
+        //         Age: 22,
+        //         designation:"Frontend-developer",
+        //     }
+        //     function userInfo(obj){
+        //         return function(info){
+        //         return obj[info];
+        //         }
+        //     }
+
+        //     let res = userInfo(UserObj);
+        //     console.log(res('name'));
+        //     console.log(res('Surname'));
+        //     console.log(res('Age'));
+        //     console.log(res('designation'));
+
+            
+
+
+            // Start New Day Practice to Curring Function;
+
+            // function arsh()
+               function Add(a) {
+                 return (b)=>{
+                        return a+b;
+                     };
+                 };
+            
+            const Arsh = Add(10)(10)
+            console.log(Arsh);
+
+
+            // Array
+
+            fetchData={
+                name:"Code-With-Arsh",
+                password:1234,
+                host:"lkjhgasdf"
+            }
+                function DataFetching(ConnectData) {
+                    return (CollectData)=>{
+                        return ConnectData[CollectData]
+                    }
+                }
+                const Answer = DataFetching(fetchData);
+                console.log(Answer("name"));
+                console.log(Answer("password"));
+    </script>
+</body>
+</html>

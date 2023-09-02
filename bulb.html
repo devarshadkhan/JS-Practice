@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb</title>
+  </head>
+  <body>
+    <h1>Bulb</h1>
+    <button onclick="onBulb()">ON</button>
+    <button onclick="offBulb()">OFF</button>
+    <img
+      src="../Image/arsh.jpg" id="bulb" alt="" height="200px"  width="200px"
+    />
+
+    <script>
+      let onBulb = () => {
+        document.getElementById("bulb");
+        bulb.setAttribute("src", "./Image/BULBOFF.png");
+      };
+      let offBulb = () => {
+        document.getElementById("bulb");
+        bulb.setAttribute("src", "./Image/arsh1.jpg");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript OOPS & Classes</title>
+</head>
+<body>
+    <h1>Javascript OOPS & Classes</h1>
+    <body>
+      
+     </body>
+  </html>
+    <script>
+        "use strict"
+        console.log("hello Javascript OOPS");
+       // let jack=new Man()      // Constructor new Method (New instance )
+        // example
+      /*  function car(name,power,torque){
+            this.name=name
+            this.power=power
+            this.torque=torque
+        }
+               let swift=new car("swift", 100, 1000)  // constructor object
+
+               let brezza=new car("brezza", 100, 1000) // constructoe Object
+
+               console.log(swift);
+               console.log(brezza);
+
+              console.log(typeof swift);  // object
+             console.log(typeof car);  // Function
+
+              for(let i in swift){
+                    console.log(i);
+              }
+
+            car.id=123
+              car.prototype.maker="Maruti";
+              car.prototype.parent="Suzuki";
+
+              // Practice for Constructor
+
+              function bike(model,condition,fuel){
+                this.model=model
+                this.condition=condition
+                this.fuel=fuel
+              }
+              var apache=new bike(2015,"Good","Petrol")
+              console.log(apache);
+            console.log(apache.hasOwnProperty("model"));
+            for(let d in apache){console.log(d);}
+
+              
+              // let see example constructor
+
+              function latest(fashion,price,size){
+                  this.fashion=fashion
+                  this.price=price
+                  this.size=size
+              }
+                let cloth=new latest("Levis",2500,"All sizes")
+                console.log(cloth);
+              for(let x in cloth){console.log(x);}
+
+              function PC(monitor,CPU,keyboard,mouse,speaker,projector){
+                  this.monitor=monitor
+                  this.CPU=CPU
+                  this.keyboard=keyboard
+                  this.mouse=mouse
+                  this.speaker=speaker
+                  this.projector=projector
+              }
+              let PcSet=new PC(30000,25000,2000,1000,5000,10000)
+              console.log(PcSet);
+              //console.log("This is very Heavy Range projector " + PcSet.projector);*/
+
+               // Javascript class
+
+               class Car{
+                  constructor(name,fuel,colour){
+                     this.name=name
+                     this.fuel=fuel
+                     this.colour=colour
+                  }
+               }
+               let a=new Car(`Audi`, 'Petrol, CNG, Diesel','Aqua Shine')
+               let b=new Car(`Mercedes`, 'Petrol, CNG, Diesel','White')
+               let c=new Car(`BMW`, 'Petrol, CNG, Diesel','Black')
+               let d=new Car(`KIA`, 'Petrol, CNG, Diesel','black')
+               let e=new Car(`Tesla`, 'Petrol, CNG, Diesel','Gold')
+
+               /// Custom Method
+            //    start(asd);{
+            //       console.log('Starting Car');
+            //    }
+            //    stop()
+            //    {
+            //       console.log('Stopping Car');
+            // }
+
+               console.log(a);
+               console.log(b);
+               console.log(c);
+               console.log(d);
+               console.log(e);
+              
+               
+       
+    </script>
+</body>
+</html>

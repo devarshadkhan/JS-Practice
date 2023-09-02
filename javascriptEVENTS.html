@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<style>
+            .btn{
+                font-size: 20px;
+                font-family: sans-serif;
+                background: transparent;
+                color: black;
+                padding: 8px 15px;
+                display: inline-block;
+                cursor: pointer;
+                border: 1px solid;
+                border-radius: 5px;
+                text-align: center;
+                position: relative;
+                margin: 10px;
+                line-height: 10px;
+            }
+            .head{
+                text-align: center;
+                font-family: sans-serif;
+                font-style: italic;
+                font-size: 25px;
+                color: rgb(255, 169, 9);
+            }
+</style>
+<body>
+        <h1 class="head">JavaScript  Events And EventListener</h1>
+              <center>  <button class="btn changebackground b1">Red</button>
+                <button class="btn changebackground b2">Blue</button>
+                <button class="btn changebackground b3">Green</button>
+                <button class="btn changebackground b4">Yellow</button>
+                <button class="btn changebackground b5">Pink</button> <br>
+                <button class="btn changebackground b6">Aqua</button>
+                <button class="btn changebackground b7">Violet</button>
+                <button class="btn changebackground b8">fuchsia</button>
+                <button class="btn changebackground b9">indigo</button>
+                <button class="btn changebackground b9">wheat</button>
+            </center>
+
+            <script>
+                 function changeBg(Bg){
+                        document.body.style.backgroundColor=Bg;                 }
+                    document.querySelectorAll(".changebackground").forEach(function(B){
+                            B.addEventListener("click", function(){
+                                changeBg(this.textContent)
+                            }) });
+             
+
+            </script>
+
+
+            
+</body>
+</html>

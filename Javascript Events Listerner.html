@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JS</title>
+    <style>
+        *{ margin: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
+        a{ text-decoration: none;}
+        body{ 
+            font-family: system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        ul{ list-style: none; padding: 0;}
+        [disabled]{ cursor:not-allowed;}
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 10px;
+        }
+        .btn{
+            padding: 8px 15px;
+            border: 1px solid;
+            background: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #333;
+            display: inline-block;
+            font: 14px sans-serif;
+            line-height: 1;
+        }
+        .btn:active{ background: #ccc;}
+        .rightmenu{ border: 1px solid #000; position: absolute;  box-shadow: 0px 0px 5px #666; border-radius: 5px; padding: 10px; display: none; z-index: 1; background: #fff; }
+
+        [draggable="true"]:hover{ cursor: grab;}
+        [draggable="true"]:active{ cursor: grabbing;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 draggable="true">JavaScript Events</h1>
+        <button class="btn" onclick="print()">Print</button>
+        <a href="" class="btn link">Click</a>
+        <button class="btn changebackground b1">Red</button>
+        <button class="btn changebackground b2">Green</button>
+        <button class="btn changebackground b3">Blue</button>
+        <button class="btn changebackground">Aqua</button>
+        <button class="btn changebackground">Yellow</button>
+        <button class="btn print">Print</button>
+        <div class="rightmenu">
+            <ul>
+                <li><a href="">Edit</a></li>
+                <li><a href="">Save</a></li>
+                <li><a href="">Delete</a></li>
+            </ul>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus officiis quisquam doloribus, labore dolorum repellat esse ipsa maxime harum magni facilis eos dignissimos dolores sunt nesciunt consequatur animi tempore cupiditate.</p>
+        <label>Range: <input type="range" min="1" max="500" value="200"> <span>200</span></label>  <br>
+        <img src="img/loader.svg" alt="">
+        <hr>
+        <textarea cols="30" rows="4"></textarea> <span>0</span>
+        <form action="" name="contact">
+            <label>Name: <input type="text" name="name"></label>
+            <label>Age: <input type="number" name="age"></label>
+            <button>Send</button> <span></span>
+        </form>
+        <input type="text" onselect="console.log('select')" oncopy="console.log('copied')" onpaste="console.log('pasted')">
+
+        <ol>
+            <li>List</li>
+            <li>List</li>
+        </ol>
+    </div>
+<script>
+    "use strict";
+ 
+    function sayHi(){ console.log("hello")};
+
+
+    // document.querySelector("h1").onclick=sayHi;
+    // document.querySelector("h1").onclick=function(){ console.log(this) };
+
+    //document.querySelector("h1").addEventListener("click",sayHi);
+    //document.querySelector("h1").addEventListener("click",function(){ console.log(this);});
+
+
+
+    document.querySelector(".link").addEventListener("click",function(e){
+        e.preventDefault();                     // stop default action
+        //console.log(this);                  // current object
+        //console.log(e);                       // name of event
+        //console.log(e.target);                   // targeted element
+        //console.log(e.clientX- this.offsetLeft);                   // pointer at x 
+        //console.log(e.clientY-this.offsetTop);                   // pointer at Y 
+     });
+    
+    //document.querySelector("h1").addEventListener("dblclick",function(){ console.log("dbl click"); })
+   /*  window.addEventListener("contextmenu",function(e){
+        e.preventDefault();    
+        document.querySelector(".rightmenu").style.display="block";
+        document.querySelector(".rightmenu").style.left=e.clientX+"px";
+        document.querySelector(".rightmenu").style.top=e.clientY+"px";
+     }); */
+
+     document.querySelector('input[ type="range"]').addEventListener("input",function(){
+        this.nextElementSibling.textContent=this.value;
+        document.querySelector("img").width=this.value;
+
+     });
+     document.querySelector('input[ type="range"]').addEventListener("change",function(){
+         console.log(this.value);
+     });
+
+
+ //    window.onmousemove=function(e){ console.log(e.clientX, e.clientY);}
+
+ document.querySelector("textarea").addEventListener("keyup",function(e){
+     this.nextElementSibling.innerHTML=this.value.length;
+ });
+
+ window.onkeydown=function(e){
+     //console.log(e.which);
+     if( e.which==27){ console.log("Escape key");}
+     if( e.which==37){}
+     if( e.which==39){}
+ };
+
+ document.contact.addEventListener("submit",function(e){
+    if( this.name.value.trim()==""){
+        e.preventDefault();
+        document.querySelector('form span').textContent="Enter Name";
+        document.querySelector('form span').style.color="orange";
+        this.name.focus();
+    }
+    else if( this.age.value.trim()==""){
+        e.preventDefault();
+        document.querySelector('form span').textContent="Enter Age";
+        document.querySelector('form span').style.color="orange";
+        this.age.focus();
+    }
+    else if(isNaN(this.age.value) || this.age.value<=0 ||  this.age.value>120 ){
+        e.preventDefault();
+        document.querySelector('form span').textContent="Enter Valid Age";
+        document.querySelector('form span').style.color="red";
+        this.age.focus();
+    }
+    else{
+        alert("form submit");
+    }
+
+ });
+
+ console.time("time");
+
+ window.onload=function(){
+     console.log("window loaded");
+     console.timeEnd("time");
+    
+ }
+     
+ console.log("done");
+
+ // 
+
+ function changeBg(x){
+     document.body.style.backgroundColor=x;
+     
+ }
+//  document.querySelector(".b1").addEventListener("click",function(){
+//      changeBg(this.textContent);
+//  });
+//  document.querySelector(".b2").addEventListener("click",function(){
+//      changeBg(this.textContent);
+//  });
+//  document.querySelector(".b3").addEventListener("click",function(){
+//      changeBg(this.textContent);
+//  });
+document.querySelectorAll(".changebackground").forEach(function(i){
+    i.addEventListener("click",function(){
+        changeBg(this.textContent);
+    })
+});
+
+
+function printOut(){
+    window.print();
+    this.removeEventListener("click",printOut);
+}
+
+document.querySelector(".print").addEventListener("click",printOut);
+
+
+// 
+
+document.querySelector("ol").addEventListener("click",function(){ console.log(this); },true)
+document.querySelector("ol li").addEventListener("click",function(){ console.log(this);},true)
+document.querySelector("ol li:last-child").addEventListener("click",function(){ console.log(this);},true)
+
+
+if( navigator.maxTouchPoints>=1){
+    document.querySelector("h1").addEventListener("touchstart",function(){ console.log("touch start"); })
+    document.querySelector("h1").addEventListener("touchmove",function(){ console.log("touch move"); })
+    document.querySelector("h1").addEventListener("touchend",function(){ console.log("touch end"); })
+}
+else{
+    document.querySelector("h1").addEventListener("dragstart",function(){ console.log("drag start"); })
+    document.querySelector("h1").addEventListener("drag",function(){ console.log("drag move"); })
+    document.querySelector("h1").addEventListener("dragend",function(){ console.log("drag end"); })
+}
+
+
+</script>    
+</body>
+</html>

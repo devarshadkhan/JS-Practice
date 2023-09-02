@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Arrays</title>
+    <style>
+      body {
+        background: blanchedalmond;
+        font: 1em sans-serif;
+        text-align: center;
+      }
+      .btn {
+        color: #000;
+        background: #a4fa7c;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        border: 2px solid red;
+        border-radius: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 15px 10px 8px rgba(37, 36, 36, 0.533);
+      }
+      .a {
+        color: #000;
+        background: #a4fa7c;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        border: 2px solid red;
+        border-radius: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 15px 10px 8px rgba(37, 36, 36, 0.533);
+      }
+      .a:hover {
+        background: #62d2ee;
+        transition: 0ms;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: 1s;
+      }
+      .btn:hover {
+        background: #62d2ee;
+        transition: 0ms;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: 1s;
+      }
+      .h1 {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>JAVASCRIPT ARRAYS</h1>
+    <button class="btn">SUBMIT</button>
+    <a href="" class="a">REFRESH</a>
+    <a href="https://techaltum.com" target="_blank" class="a">VISIT US</a>
+
+    <script>
+      "use strict";
+      console.log("Welcome to JavaScript Arrays");
+
+        /// Arrays Start
+
+        /*   let  month = ['jan','feb','mar','apr','may','june'];
+                        console.log(month);             // 
+                        console.log(month.length);      // month.length   // 6
+                        console.log(typeof month);      // typeof month  //object
+                            */
+
+        /*            let days = ['mon','tues','wed','thurs','fri','sat','sun']
+                console.log(days);
+                console.log(days[0]);       // Traversal Value (Javascript me number ki start 0 se shuru hoti h
+                console.log(days[1]);       // Traversal Value (Javascript me number ki start 0 se shuru hoti hai)
+        console.log(days[2]);
+                console.log(days[3]);
+        console.log(days[4]);
+            console.log(days[5]);
+            console.log(days[6]);
+        console.log(days[7]);       // Traversal Value (Javascript me number ki start 0 se shuru hoti hai)
+                                */
+
+     /*                       let month = ["jan", "feb", "mar", "apr", "may", "june"];
+                            let month2 = ["July", "Aug", "Sept", "oct", "Nov", "Dec"];
+                            let concat = [...month, ...month2];
+                            console.log(month);             // Check data collection
+                            console.log(month.length);      // length 6
+                            console.log(month[month.length-1]);          // length check 6
+                            console.log(month.sort());              // Sort check karne ke liye
+                            console.log(month.reverse());               // left to right
+                            console.log(month.indexOf());
+                            console.log(month.shift());
+                            console.log(month.unshift("aa"));           /// add karta hai
+                            console.log(month.pop());           // Remove karat hoi
+                            console.log(month.push("July"));              // aad karta hai
+                            console.log(month.join(":"));    // join karta hai beech me
+                            console.log(month.join("-"));    // join karta hai beech me
+                            console.log(concat);   /// 2 variables ko add karta haib yani manuplate
+
+                            // Advance Array Method
+
+                            // Filter
+
+                            let ages = [1,2,5,19,25];
+                            console.log(ages);
+                           let b = ages.filter(CheckAges);
+                           function CheckAges(ages){
+                             return ages>=18
+                           }
+                           console.log(b);
+
+                           // Find
+
+                           let num = [1,10,20,50];
+                           let b = num.find(CheckNum)
+                           function CheckNum(num){
+                              return num>=18      // 20  Aage nhi jaiga
+                              //return num<=18    // 1
+                           }
+                           console.log(b);
+
+                           //Find Index
+
+                           let num = [1,10,20,50];    // 0(1): 1(10); 2(20); 3(50);
+                           let b = num.findIndex(CheckNum)
+                           function CheckNum(num){
+                              return num>=18      // 2  ye bas index check karta hai
+                           }
+                           console.log(b);
+
+                          //some
+
+                         let num = [10,10,20,50]
+                         let b = num.some(same)
+                         function same(num){
+                           return num>=20     // True
+                           return num>=200     // False
+                         }
+                         console.log(b);*/
+
+                         /// For Each Loop
+
+                       /*  let name = ["Arshad","Amaan","Aquib"]
+                         let a = name.forEach(function(Tech,index){
+                                console.log(Tech+" "+":"+index);
+                         })     */
+
+
+
+                            // Array Practice
+                        
+                      /*   let Name =['Arshad','Amaan','Aquib','Irshad']
+                         //let Name1=['khan','khan']
+                         console.log(Name);
+                         ///Exercise
+                         //console.log(Name.sort());
+                         //console.log(Name[0]);  sort ke baad kare toh out wahi aagaig jo sort ne data diya hai
+                         //console.log(Name.reverse());  //left to right
+                         //console.log(Name.indexOf());
+                         //console.log(Name.shift());  // First element Remove karta hai
+                         //console.log(Name.unshift("ARSHAD"));  // Fisrt me add karta hai
+                         //console.log(Name.pop()); // last ka remove kar deta hai
+                         //console.log(Name.push("Arsh")); // last me add kara hai
+                         //console.log(Name.splice(0,2)); // delete karta hai
+                         //console.log(Name.slice(1,3));
+                         //console.log(Name.join("----")); //beech me design type ka add karta hai
+
+                  /*let study = Name.concat(Name1);console.log(study); // concat 2 variables ko add karata hai
+                        // ES6 concat speared operator
+                        let dude =[...Name,...Name1]
+                        console.log(dude);*/
+                         
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

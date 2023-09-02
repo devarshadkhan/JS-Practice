@@ -1,0 +1,68 @@
+*{ margin:0; box-sizing: border-box; }
+body{ font-family:sans-serif}
+
+.container{ width: 1200px; margin: auto; padding: 0 15px;}
+
+.row{ margin: 0 -15px;}
+.row:after{ content: ""; display: block; clear: both}
+
+.col-1{ width: 8.33%; float: left; padding: 0 15px;}
+.col-2{ width: 16.66%; float: left; padding: 0 15px;}
+.col-3{ width: 25%; float: left; padding: 0 15px;}
+.col-4{ width: 33.33%; float: left; padding: 0 15px;}
+.col-5{ width: 41.66%; float: left; padding: 0 15px;}
+.col-6{ width: 50%; float: left; padding: 0 15px;}
+.col-7{ width: 58.33%; float: left; padding: 0 15px;}
+.col-8{ width: 66.66%; float: left; padding: 0 15px;}
+.col-9{ width: 75%; float: left; padding: 0 15px;}
+.col-10{ width: 83.33%; float: left; padding: 0 15px;}
+.col-11{ width: 91.66%; float: left; padding: 0 15px;}
+.col-12{ width: 100%; float: left; padding: 0 15px;}
+
+.wrap-1 .container{
+    height: 100%;
+    margin-top: 50px;
+    background-color: #000;
+    color: #fff;
+
+}
+.wrap-1 h1{
+    display: flex;
+    font-weight: lighter;
+    justify-content: center;
+}
+.wrap-2{
+    height: 100%;
+    margin-top: 10px;
+}
+/* .wrap-2 .container{background-color: rgb(108, 108, 160);} */
+/* .wrap-2 table{
+    border: 1px solid salmon;
+} */
+.wrap-2 table{
+    border: 2px solid red;
+    border-radius: 8px;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(226, 128, 93);
+    margin-left: 70px;
+    padding: 50px;
+
+}
+.wrap-2 td{
+    border: 1px solid greenyellow;
+    padding: 10px;
+    margin: 10px;
+    font-weight: lighter;
+    color: white;
+    
+}
+
+.wrap-2 tr{
+    margin: 10px;
+    color: crimson;
+}
+td:hover{background-color: gold;}
+

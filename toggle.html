@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULB</title>
+    <style>
+      body {
+        background: aliceblue;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      .heading {
+        font-family: sans-serif;
+        font-size: 50px;
+        text-align: center;
+        font-style: italic;
+        margin-top: 20px;
+        color: rgb(250, 17, 161);
+      }
+      .dark {
+        font-size: 20px;
+        font-style: italic;
+        margin: 15px;
+        background-color: #fe3e6b;
+        color: #fff;
+        padding: 20px;
+        font-family: sans-serif;
+        border-radius: 15px 30px;
+        border: inherit;
+      }
+      .dark:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .para {
+        font-family: sans-serif;
+        font-size: 25px;
+        padding: 10px;
+        text-align: justify;
+      }
+      .black {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .black:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .dodgerBlue {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .dodgerBlue:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .gold {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+
+      .gold:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .indigo {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .indigo:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .lawngreen {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .lawngreen:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .lightskyblue {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .lightskyblue:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .lightpink {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .lightpink:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .Purple {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .Purple:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+      .hide {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        background-color: #fe3e6b;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 15px;
+        border: inherit;
+      }
+      .hide:hover {
+        cursor: pointer;
+        background: coral;
+        border-radius: 20px;
+        border: solid rgb(39, 197, 236);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="heading">Change Font Colour On Link And Toggle</h1>
+
+    <button class="dark" onclick="darkMode()">Black</button>
+    <button class="dark" onclick="DodgerBlue()">DodgerBlue</button>
+    <button class="dark" onclick="gold()">gold</button>
+    <button class="dark" onclick="indigo()">indigo</button>
+    <button class="dark" onclick="lawngreen()">lawngreen</button>
+    <button class="dark" onclick="lightskyblue()">lightskyblue</button>
+    <button class="dark" onclick="lightpink()">lightpink</button>
+    <button class="dark" onclick="lightMode()">Light</button>
+
+    <h2 class="heading">CHANGE COLOUR ON BUTTON</h2>
+    <h2 class="heading">WEB DEVELOPMENT</h2>
+    <p class="para">
+      Web development is the work involved in developing a website for the
+      Internet or an intranet. Web development can range from developing a
+      simple single static page of plain text to complex web applications,
+      electronic businesses, and social network services.
+    </p>
+
+    <button class="black">Red</button>
+    <button class="dodgerBlue">DodgerBlue</button>
+    <button class="gold">gold</button>
+    <button class="indigo">indigo</button>
+    <button class="lawngreen">lawngreen</button>
+    <button class="lightskyblue">lightskyblue</button>
+    <button class="lightpink">lightpink</button>
+    <button class="Purple">Purple</button>
+    <button class="hide" onclick="toggle()">Hide Text</button>
+
+    <script>
+      /// TOGGLE
+
+      function darkMode() {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      }
+
+      function lightMode() {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      }
+      function DodgerBlue() {
+        document.body.style.backgroundColor = "DodgerBlue";
+        document.body.style.color = "white";
+      }
+
+      function gold() {
+        document.body.style.backgroundColor = "gold";
+        document.body.style.color = "white";
+      }
+
+      function indigo() {
+        document.body.style.background = "indigo";
+        document.body.style.color = "white";
+      }
+
+      function lawngreen() {
+        document.body.style.background = "lawngreen";
+        document.body.style.color = "white";
+      }
+
+      function lightskyblue() {
+        document.body.style.backgroundColor = "lightskyblue";
+        document.body.style.color = "white";
+      }
+
+      function lightpink() {
+        document.body.style.backgroundColor = "lightpink";
+        document.body.style.color = "white";
+      }
+
+      function Light() {
+        document.body.style.backgroundColor = "Light";
+        document.body.style.color = "white";
+      }
+
+      // TEXT COLOR CHANGE
+
+      document.querySelector(".black").onclick = function () {
+        document.querySelector(".para").style.color = "red";
+      };
+
+      document.querySelector(".dodgerBlue").onclick = function () {
+        document.querySelector(".para").style.color = "DodgerBlue";
+      };
+
+      document.querySelector(".gold").onclick = function () {
+        document.querySelector(".para").style.color = "gold";
+      };
+      document.querySelector(".indigo").onclick = function () {
+        document.querySelector(".para").style.color = "indigo";
+      };
+
+      document.querySelector(".lawngreen").onclick = function () {
+        document.querySelector(".para").style.color = "lawngreen";
+      };
+
+      document.querySelector(".lightskyblue").onclick = function () {
+        document.querySelector(".para").style.color = "lightskyblue";
+      };
+
+      document.querySelector(".lightpink").onclick = function () {
+        document.querySelector(".para").style.color = "lightpink";
+      };
+
+      document.querySelector(".Purple").onclick = function () {
+        document.querySelector(".para").style.color = "Purple";
+      };
+
+      /// HIde text Function
+
+      function toggle() {
+        let btn = document.querySelector(".toggle");
+        let p = document.querySelector(".para");
+
+        if (getComputedStyle(p).display == "none") {
+          P.style.display = "inline";
+          btn.innerHTML = "Hide";
+        } else {
+          p.style.display = "none";
+          btn.innerHTML = "Show";
+        }
+      }
+    </script>
+  </body>
+</html>

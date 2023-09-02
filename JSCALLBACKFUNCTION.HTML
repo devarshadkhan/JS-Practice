@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT CALLBACK FUNCTION</title>
+  </head>
+  <body>
+    <h1>JAVASCRIPT CALLBACK FUNCTION</h1>
+    <script>
+      "use strict";
+      /*
+         /// Function Return value for variable store
+// Ham variable me pure data ko store karate hai
+/// Conventional function isko ham pass karte hai
+
+function lappi(b,c){
+      return b+c
+}
+let s = lappi(1000,1000)
+
+console.log(s)
+
+/// Function Return value variable store
+
+
+function ulu(k,l){
+      return k+l
+}
+let f = ulu(250,250);
+
+console.log(f);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Javascript callback function
+
+function Tech(v){
+      v();
+}
+function Altum(){
+      console.log("Best Institute in Noida For Tech Altum");
+}
+Tech(Altum);
+
+//  callback function
+
+function glamour(){
+      add();
+}
+function technologies(){
+      console.log("This is valuable Company");
+}
+technologies(glamour);
+
+//callback function
+
+function garden(){
+      keep();
+}
+function green(){
+      console.log("The Garden is neat & clean:");
+}
+green(garden);
+      
+//callback function
+
+function kite(){
+      console.log("Kite is using a flying");
+      console.log("Light is a Electric foam");
+}
+function light(){
+    PopStateEvent();  
+}
+kite(light);
+
+/// Callback function 
+
+function light(){
+      swith();
+}
+function Bulb(){
+      console.log("Light is on/off");
+}
+Bulb(light);
+
+
+/// Callback Function
+
+/// Conventional function isko ham pass karte hai
+
+function sum(a,b,c){
+      return a+b+c;
+}
+function total(gf, a,b,c){
+      return gf(a,b,c);
+}
+
+console.log(total(sum, 10,10,10));
+
+
+            // Practice call back-Function
+
+                  function TotalSum(){
+                        console.log();
+                  }
+                  function MyNumber(num1,num2){
+                        let sum = num1+num2;
+                        return sum;
+                  }
+                  let result = TotalSum(10+10)
+                         console.log(result);
+                  
+
+                              /// Set Time OUt Function
+                        function Greet(){
+                              console.log("Hello Arshad Khan");
+                        }
+                        setTimeout(Greet,5000)     
+                        
+                        */
+
+      // Call Back Function is very IMportant Practice
+
+                                          /*1*/ function part1() {
+                                          console.log("I am Function");
+                                          }
+                                          function Part2(callback) {
+                                          callback();
+                                          }
+                                          Part2(part1);
+
+                                          /*2*/ function Tech() {
+                                          console.log("Best IT Services Company");
+                                          }
+                                          function technologies(WEBT) {
+                                          WEBT();
+                                          }
+                                          technologies(Tech);
+
+                                          /*3*/ function happy(a) {
+                                          console.log("I am Very Happy" +a);
+                                          }
+                                          function Nice(a,callback) {
+                                       // let a = 100;            // Ise hatane ke baad bhi wark karega
+                                          callback(a);
+                                          }
+                                          Nice(100,happy);
+
+                                          // Synchoronus
+
+                                 /*4*/       function noida() {
+                                          console.log("Best Institute In Noida For Tech Altum");
+                                          }
+                                          function Keywork(Web) {
+                                          Web();
+                                          }
+                                          Keywork(noida);
+
+                                    console.log("Done");
+
+                                    // asynchoronmus
+
+                                    setTimeout(function time(){
+                                          console.log("Asynchorous Function With Set time out");
+                                    },5000);
+    </script>
+  </body>
+</html>

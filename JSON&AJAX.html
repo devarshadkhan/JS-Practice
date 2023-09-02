@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON AND AJAX</title>
+</head>
+<body>
+        <!-- <h1>JSON And AJAX</h1>
+        <p class="demo">Javascripts</p>
+<header></header>
+<nav id="nav"></nav>
+<button onclick="loaddata()">click</button>
+
+        <select id="input" onchange="state()">
+            <option selected disabled>--Choose Country--</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>Saudi Arabia</option>
+        </select>
+
+        <select  id="output">
+            <option selected disabled>--Choose State--</option>
+        </select> -->
+        <div class="container">
+            <h1>JS <u>DOM</u></h1>
+            <section>
+                <h2>Github API</h2>
+                <button class="btn git">Github </button> <img class="loader" src="img/loader.svg" alt="" width="80" height="80">
+                <p class="err"></p>
+                <table class="data"></table>
+            </section>
+            <section>
+                <h2>Pincode API</h2>
+                <form action="" class="pin">
+                    <label>Pincode : <input type="search" maxlength="6" pattern="^[0-9]{6}$" name="pincode" required value="201301"></label>
+                    <button class="btn">Pincode</button>  <img class="loader2" src="img/loader.svg" alt="" width="80" height="80">
+                </form>
+                <p class="err2"></p>
+                <table class="data2">
+                    <tr>
+                        <th>S No</th>
+                        <th>Pincode</th>
+                        <th>Name</th>
+                        <th>Division</th>
+                        <th>District</th>
+                        <th>State</th>
+                    </tr>
+                </table>
+            </section>
+            <footer></footer>
+        </div>
+<nav></nav>
+
+        <script>
+            "use strict"
+            console.log("Javascript JSON And Ajax");
+
+            // object ke sir wale question
+         /*   function state(x){
+                let a=document.getElementById("input").value;
+                if (a=="India")
+                {
+                    var arr=["Delhi","Bangalore","Mumbai","Goa",]
+                }
+
+                else if(a==="Delhi")
+                {
+                    var arr=["South delhi", "North delhi"]
+                }
+
+                else if(a==="USA")
+                {
+                    var arr=["California","Texas","New York","New Jersey"]
+                }
+                else if(a==="Saudi Arabia")
+                {
+                    var arr=["Jeddah",'Riyadh',"Mecca","Madina"]
+                }
+
+                let string="";
+                for(x=0; x<arr.length; x++)
+                {
+                    string=string+"<option value="+arr[x]+">"+arr[x]+"</option>";
+                    document.getElementById("output").innerHTML=string;
+                }
+            }*/
+
+
+
+            // Ajax
+// {
+//             let xhr=new XMLHttpRequest();
+//             xhr.open('get',"nav.html", true);
+//             xhr.send();
+//             xhr.onload=function(){
+//                 document.getElementById(".nav").innerHTML=this.responseText;
+//             }
+//         }
+
+
+
+    function loaddata(){
+
+        {
+            let data=new XMLHttpRequest();
+           
+            data.onload=function(){
+                document.getElementById(".nav").innerHTML=this.response;
+            }
+
+            data.open('GET',"nav.html", true)
+            data.send();
+           
+
+        }
+    };
+
+        // JSON
+
+                // object
+
+        /*let data =
+        
+        [
+         
+           '{"name":"Arshad khan", "Age":"21", "Job":"Software developer" ["hobbies":"football"] "isAlive":true}'
+        ]
+        console.log(data);
+        let  call = JSON.parse(data);*/
+
+
+        // Ajax server call
+      
+
+        </script>
+</body>
+</html>

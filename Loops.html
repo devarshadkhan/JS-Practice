@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPS</title>
+    <style>
+        body{
+            background: blanchedalmond;
+            font: 1em sans-serif;
+            text-align: center;
+
+        }
+        .btn {
+            color: #000;
+            background: #a4fa7c;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            border: 2px solid red;
+            border-radius: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 15px 10px 8px rgba(37, 36, 36, 0.533);  
+            }
+        .a{
+            color: #000;
+            background: #a4fa7c;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            border: 2px solid red;
+            border-radius: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 15px 10px 8px rgba(37, 36, 36, 0.533);
+            }
+            .a:hover{
+                background: chocolate;
+                transition: 0ms;
+                cursor: pointer;
+            }
+            .btn:hover{
+                background: chocolate;
+                transition: 0ms;
+                cursor: pointer;
+            }
+            .h1{
+                font-family: sans-serif;
+            }
+     
+    </style>
+</head>
+<body>
+        <h1>JAVASCRIPT LOOPS</h1>
+        <button class="btn">SUBMIT</button>
+        <a href="" class="a">REFRESH</a>
+        <a href="https://techaltum.com" target="_blank" class="a">VISIT US</a>
+        <script>
+                "use strict"
+                
+                // For Loops
+
+                let p=0;
+
+                for(p=0; p<10; p++)
+                {
+                    console.log(p);
+                }
+                   
+                    /// Let see Example
+
+                    let a = "Arshad"
+                        for(; a<"Khan"; a++)
+                        {
+                            console.log(a);
+                        } 
+                        
+                        let li="";
+                        for(li=99; li<100; li++)
+                        {
+                            console.log(li);
+                        }
+                        
+                        // let see Example
+
+                        let high="";
+                        for(high=10; high<20; high++){
+                            console.log(high);
+                        }
+                        
+                        ////  BReak Loop
+
+                        let l=1;
+                        for(l=1; l<=10; l++){
+                            if(l%5==0){console.log(l) ; break}
+                        }   //// Output 5
+
+                        /// whitout Break
+
+                        let h=1;
+                        for(a=1; a<=10; a++){
+                            if(a%5==0){console.log(a);}
+                        } /// output 5 and 10
+
+                        
+                        // Nested Loops
+
+                        let f =1;
+                        for(f=1; f<=3; f++){
+                           console.log("Outer Loops");
+                            console.log(f); 
+                            
+                            for(let m=1; m<3; m++){
+                                console.log("Inner Loops");
+                                console.log(m);
+                            }
+                        }
+                        
+                        
+                
+                        
+                        
+                        
+                        
+                        console.log("Done");
+
+        </script>
+</body>
+</html>
